@@ -12,3 +12,4 @@ Personal AI/ML workspace on AWS EC2.
 ## How to run
 - Jupyter Lab via SSH tunnel on port 8888
 - Models/data stored in S3 (not in git)
+# home_ai
