@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "questions": [
+    {
+      "id": "region",
+      "label": "Preferred Regions",
+      "type": "multi_choice",
+      "choices": ["Northeast", "Midwest", "South", "West", "International"]
+    },
+    {
+      "id": "budget",
+      "label": "Monthly Housing Budget (USD)",
+      "type": "range",
+      "min": 500,
+      "max": 6000,
+      "step": 100
+    },
+    {
+      "id": "climate",
+      "label": "Climate Preference",
+      "type": "single_choice",
+      "choices": ["Cold", "Mild", "Warm", "Hot/Humid", "Dry"]
+    },
+    {
+      "id": "pace",
+      "label": "Lifestyle Pace",
+      "type": "single_choice",
+      "choices": ["Calm", "Balanced", "Fast"]
+    },
+    {
+      "id": "culture",
+      "label": "Community & Culture",
+      "type": "multi_choice",
+      "choices": ["Arts", "Diversity", "Nightlife", "Outdoors", "Family-friendly"]
+    }
+  ]
+}
