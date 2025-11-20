@@ -1,0 +1,15 @@
+user_id: "dj"
+display_name: "DJ Dumervil"
+defaults:
+  region: ["South", "East"]
+  budget: [1500, 2500]
+  climate: "Mild"
+  pace: "Balanced"
+  culture: ["Diversity", "Arts"]
+weights:
+  region: 0.25
+  budget: 0.25
+  climate: 0.20
+  pace: 0.15
+  culture: 0.15
+notes: "Bio-driven defaults; safe to override in UI."
