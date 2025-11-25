@@ -1,0 +1,4 @@
+city,state,rent,temperature,diversity_score
+Charlotte,NC,1700,68,0.81
+Raleigh,NC,1650,66,0.79
+Atlanta,GA,1800,72,0.83

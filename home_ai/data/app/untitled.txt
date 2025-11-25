@@ -1,0 +1,50 @@
+import streamlit as st
+import pandas as pd
+
+# Load your city dataset
+df = pd.read_csv("../cities.csv")   # adjust path if needed
+
+st.title("🏙️ Geo-Lifestyle Recommender")
+st.write("Find the best cities for your lifestyle preferences.")
+
+# User inputs
+pref_min_rent = st.slider("Minimum Rent ($)", 500, 3000, 1500)
+pref_max_rent = st.slider("Maximum Rent ($)", 500, 3000, 2500)
+pref_temp = st.slider("Preferred Temperature (°F)", 40, 90, 70)
+pref_diversity = st.slider("Minimum Diversity Score", 0.0, 1.0, 0.5)
+
+# Scoring function
+def score_city(row, pref_min_rent, pref_max_rent, pref_temp, pref_diversity):
+
+    score = 0
+
+    # Rent fit
+    if pref_min_rent <= row["rent"] <= pref_max_rent:
+        score += 40
+
+    # Climate fit (closer temp = better)
+    score += max(0, 30 - abs(row["temperature"] - pref_temp))
+
+    # Diversity fit
+    if row["diversity_score"] >= pref_diversity:
+        score += 30
+
+    return score
+
+# Apply scoring
+df["score"] = df.apply(
+    score_city,
+    axis=1,
+    args=(pref_min_rent, pref_max_rent, pref_temp, pref_diversity)
+)
+
+# Sort and show top cities
+top = df.sort_values("score", ascending=False).head(10)
+
+st.subheader("🏆 Top Matches For You")
+st.dataframe(top)
+
+# Optional: map visualization
+if st.checkbox("Show map"):
+    st.map(top.rename(columns={"lat": "latitude", "lng": "longitude"}))
+

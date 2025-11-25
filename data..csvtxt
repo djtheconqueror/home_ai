@@ -1,0 +1,4 @@
+city,state,rent,temperature,diversity
+Miami,FL,2200,80,0.75
+Houston,TX,1600,78,0.82
+Charlotte,NC,1700,68,0.81
