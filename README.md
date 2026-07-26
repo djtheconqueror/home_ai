@@ -167,3 +167,24 @@ Planned improvements include:
 ## Note
 
 These are early-stage portfolio prototypes using synthetic data. They are intended for learning, exploration, and demonstration of applied AI workflows rather than production use.
+
+### 5. Operational Biosecurity & Readiness AI v1
+
+**Focus:** Biosecurity, human readiness, environmental risk, and operational decision support
+
+This capstone project combines human readiness indicators, environmental/geographic context, and biosignal risk features to estimate operational biosecurity and readiness status.
+
+The model evaluates signals such as sleep, stress, hydration, training load, cognitive fatigue, temperature, humidity, air quality, population density, local disease trend, biosignal anomaly, detection confidence, and signal persistence.
+
+**Outputs include:**
+
+- operational status: READY / MONITOR / MITIGATE / RECOVER
+- overall risk score
+- readiness risk
+- environmental risk
+- biosignal risk
+- recommendation
+- AI-style explanation of key risk drivers
+
+**Purpose:**  
+To connect prior applied AI projects into a broader decision-support prototype for biosecurity, human performance, and operational readiness analytics.
